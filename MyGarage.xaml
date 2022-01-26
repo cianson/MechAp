@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MechAp.MyGarage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="50" Margin="0" CornerRadius="0">
+                <Label Text="My Garage" HorizontalTextAlignment="Center" TextColor="Silver" FontSize="56"/>
+            </Frame>
+            <Frame Background="Black" Margin="30, 0, 30, 15" CornerRadius="10">
+                <Image Source="mechaplogo.PNG" WidthRequest="200" MinimumWidthRequest="200">
+                </Image>
+            </Frame>
+            <Entry Placeholder="Vehicle 1" Margin="20, 3, 30, 10"/>
+            <Entry Placeholder="Vehicle 2" Margin="20, 3, 30, 10"/>
+            <Entry Placeholder="Vehicle 3" Margin="20, 3, 30, 10"/>
+
+            <Button x:Name="VehicleRegBtn" Text="Register a Vehicle" Clicked="VehicleRegBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="TrackerViewBtn" Text="Maintenance Tracker" Clicked="TrackerViewBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="MaintMenuBtn" Text="Maintenance Menu" Clicked="MaintMenuBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

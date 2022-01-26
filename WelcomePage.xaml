@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkRed" Padding="36" Margin="0" CornerRadius="0">
+                <Label Text="Welcome to&#xA;MechAp" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Frame BackgroundColor="DarkBlue" Padding="20" Margin="-10" CornerRadius="0">
+                <Label Text="Keep Your Car Running" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+            </Frame>
+            <Frame BackgroundColor="Black" Margin="30, 30, 30, 30" CornerRadius="30">
+                <Image Source="mechaplogo.png" WidthRequest="200" MinimumWidthRequest="200">
+                </Image>
+            </Frame>
+            <Button x:Name="LoginPgBtn" Text="Login" Clicked="LoginPgBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="RegistrationPgBtn" Text="New? Register Here" Clicked="RegistrationPgBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

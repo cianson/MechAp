@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.MaintenanceMenu">
+
+    <AbsoluteLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="85"/>
+                    <ColumnDefinition Width="85"/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Image should be to show which maintenance menu the user is in (basic, coolant system, ect.)-->
+                <Image Source="" BackgroundColor="Black"
+                   Grid.Column="0" Grid.Row="0"/>
+                <!--Replace label text with variable to reflect which vehicle's maintenance menu the user is looking at-->
+                <Label Text="Vehicle Name Variable" 
+                   Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"/>
+                <!--this Image is the Ap Logo-->
+                <Image Source="MechAppLogo" BackgroundColor="Black"
+                   Grid.Column="3" Grid.Row="0"/>
+
+
+                <!--Search menu item titles-->
+                <Entry Placeholder="Search" 
+                   Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
+
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2">
+                    <Button Text="Air Filter" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2">
+                    <Button Text="Cabin Air Filter" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3">
+                    <Button Text="Tire Pressure" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3">
+                    <Button Text="Change Tire" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4">
+                    <Button Text="Headlight Bulb" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4">
+                    <Button Text="Windshield Wiper Blades" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5">
+                    <Button x:Name="OilChangeBtn" Text="Oil Change" Clicked="OilChangeBtn_Clicked" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5">
+                    <Button Text="Front Brake Pads" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <!--List of Menus-->
+                <Frame BackgroundColor="AliceBlue" CornerRadius="30"
+                   Grid.Column="0" Grid.Row="6">
+                    <Button Text="Basic" BackgroundColor="AliceBlue" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="LightGreen" CornerRadius="30"
+                   Grid.Column="1" Grid.Row="6">
+                    <Button Text="Coolant System" BackgroundColor="LightGreen" 
+                    Padding="-10" FontSize="12" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="LightGray" CornerRadius="30"
+                   Grid.Column="2" Grid.Row="6">
+                    <Button Text="+" BackgroundColor="LightGray" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <Frame BackgroundColor="Beige" CornerRadius="30"
+                   Grid.Column="3" Grid.Row="6">
+                    <Button Text="..." BackgroundColor="Beige" 
+                    Padding="-10" FontSize="15" Grid.ColumnSpan="2"/>
+                </Frame>
+                <!--Navigate away from Maintenance Menu-->
+                <Button x:Name="MyGarageBtn" Text="My Garage" Clicked="MyGarageBtn_Clicked" CornerRadius="30"
+                    Grid.Row="7" Grid.ColumnSpan="2" Grid.Column="0"/>
+                <Button x:Name="TrackerViewBtn" Text="Maintenance Log" Clicked="TrackerViewBtn_Clicked" CornerRadius="30"
+                    Grid.Row="7" Grid.ColumnSpan="2" Grid.Column="2"/>
+                <!--Advertising Space-->
+                <Frame BackgroundColor="Black"
+                   Grid.Row="8" Grid.ColumnSpan="4">
+                    <Label Text="Advertising Space"/>
+                </Frame>
+            </Grid>
+    </AbsoluteLayout>
+
+</ContentPage>

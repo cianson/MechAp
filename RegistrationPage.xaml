@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkRed" Padding="36" Margin="0" CornerRadius="0">
+                <Label Text="Register" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Entry Placeholder="First Name"  Margin="30, 10, 30, 10"/>
+            <Entry Placeholder="Last Name"  Margin="30, 0, 30, 10"/>
+            <Entry Placeholder="Email"  Margin="30, 0, 30, 10"/>
+            <Entry Placeholder="Phone Number"  Margin="30, 0, 30, 20"/>
+            <Button Text="Create Account" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="LoginPgBtn" Text="Already Have An Account? Login Here" Clicked="LoginPgBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

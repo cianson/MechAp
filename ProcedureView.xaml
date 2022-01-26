@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.ProcedureView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Image to show which Maintenance Menu package the user is in (Basic, Coolant System, ect.)-->
+            <Image Source="" BackgroundColor="Black"
+                   Grid.Column="0" Grid.Row="0"/>
+            <!--Replace label text with variable to reflect which vehicle's maintenance item the user is looking at-->
+            <Label Text="Vehicle Name Variable" 
+                   Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"/>
+            <!--this Image is the Ap Logo-->
+            <Image Source="MechAppLogo" BackgroundColor="Black"
+                   Grid.Column="3" Grid.Row="0"/>
+
+            <Label Text="Maintenance Item Title Variable" 
+                   Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"/>
+
+            <Label Text="this is where the maintenance procedure will be once we figure out how to display it here"
+                   Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2"/>
+            <!--Navigation for procedure will need to be added-->
+
+            <!--Navigation away from procedure view-->
+            <Button x:Name="MyGarageBtn" Text="My Garage" Clicked="MyGarageBtn_Clicked" CornerRadius="30"
+                    Grid.Column="0" Grid.Row="3"/>
+            <Button x:Name="MaintMenuBtn" Text="Maintenance Menu" Clicked="MaintMenuBtn_Clicked" CornerRadius="30"
+                    Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3"/>
+            <Button x:Name="TrackerViewBtn" Text="Maintenance Record" Clicked="TrackerViewBtn_Clicked" CornerRadius="30"
+                    Grid.Column="3" Grid.Row="3"/>
+
+            <!--Advertising Space-->
+            <Frame BackgroundColor="Black"
+                   Grid.Row="4" Grid.ColumnSpan="4">
+                <Label Text="Advertising Space"/>
+            </Frame>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

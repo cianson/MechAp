@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MechAp.MaintenanceInput">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="58" Margin="0" CornerRadius="0">
+                <Label Text="Maintenance" HorizontalTextAlignment="Center" TextColor="Silver" FontSize="54"/>
+            </Frame>
+            <Frame BackgroundColor="Black" Margin="30, 0, 30, 30" CornerRadius="10">
+                <Image Source="mechaplogo.PNG" WidthRequest="200" MinimumWidthRequest="200">
+                </Image>
+            </Frame>
+
+            <Button x:Name="MyGarageBtn" Text="My Garage" Clicked="MyGarageBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="MaintMenuBtn" Text="Maintenance Menu" Clicked="MaintMenuBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
