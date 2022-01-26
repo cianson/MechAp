@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DarkRed" Padding="36" Margin="0" CornerRadius="0">
+                <Label Text="Login" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Entry Placeholder="Username"  Margin="30, 10, 30, 10"/>
+            <Entry Placeholder="Password"  Margin="30, 0, 30, 20"/>
+            <Button x:Name="MyGarageBtn" Text="Login" Clicked="MyGarageLogin_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+            <Button x:Name="WelcomePgBtn" Text="Back to Welcome Page" Clicked="WelcomePgBtn_Clicked" Margin="30, 10, 30, 20" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
