@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!-- Banner -->
+            
+            <Frame Style="{StaticResource MainBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="Login"/>
+            </Frame>
+            
+            <!-- Username Login Entries-->
+
+            <Entry Style="{StaticResource TopEntry}" 
+                   Placeholder="Username"/>
+            
+            <Entry Style="{StaticResource BottomEntry}" 
+                   Placeholder="Password"/>
+            
+            <!-- Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="MyGarageBtn" 
+                    Text="Login" 
+                    Clicked="MyGarageLogin_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="WelcomePgBtn" 
+                    Text="Back to Welcome Page" 
+                    Clicked="WelcomePgBtn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

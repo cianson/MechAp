@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.TrackerView">
+
+    <StackLayout>
+
+        <!-- Banner -->
+
+        <Frame Style="{StaticResource SubBanner}">
+            <Label Style="{StaticResource LargeLabelText}" Text="Maintenance Log"/>
+        </Frame>
+
+        <!-- Body -->
+
+        <Frame>
+            <Label Text="User's Name's vehicle Name here"/>
+        </Frame>
+
+        <Frame>
+            <Label Text="If we can figure out how to sort the items then we can have a sort option here"/>
+        </Frame>
+
+        <Frame>
+            <Label Text="Below will be the scrollable ListView of all logged maintenance in the local database for this vehicle."/>
+        </Frame>
+
+        <ListView Margin="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!-- Navigation Buttons -->
+
+        <Button Style="{StaticResource Button}"
+                Text="Add to Maintenance Log"
+                Clicked="MaintInputBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}"
+                Text="Maintenance Menu"
+                Clicked="MaintMenuBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}"
+                Text="Garage"
+                Clicked="MyGarageBtn_Clicked"/>
+
+
+
+    </StackLayout>
+
+
+</ContentPage>

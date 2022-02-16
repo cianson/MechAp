@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MechAp.MyGarage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!-- Banner -->
+            
+            <Frame Style="{StaticResource MainBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="My Garage"/>
+            </Frame>
+            
+            <!-- Logo -->
+            
+            <Frame Background="Black" Margin="30, 10, 30, -30" CornerRadius="10">
+                <Image Source="mechaplogo.PNG" WidthRequest="150" MinimumWidthRequest="150">
+                </Image>
+            </Frame>
+
+            <!-- Scroll Through List of Vehicles in Garage -->
+
+            <ScrollView Style="{StaticResource Scroll}">
+                <StackLayout>
+                    <Entry Style="{StaticResource TopEntry}"
+                   Placeholder="Vehicle 1"/>
+
+                    <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle 2"/>
+
+                    <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle 3"/>
+
+                    <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle 4"/>
+                    
+                    <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle 5"/>
+
+                    <Entry Style="{StaticResource BottomEntry}"
+                   Placeholder="Vehicle 6"/>
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Navigation Buttons-->
+
+            <Button Style="{StaticResource Button}" 
+                    x:Name="VehicleRegBtn" 
+                    Text="Register a Vehicle" 
+                    Clicked="VehicleRegBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="TrackerViewBtn" 
+                    Text="Maintenance Tracker" 
+                    Clicked="TrackerViewBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="MaintMenuBtn" 
+                    Text="Maintenance Menu" 
+                    Clicked="MaintMenuBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="LogOutBtn"
+                    Text="Log Out"
+                    Clicked="LogOutBtn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

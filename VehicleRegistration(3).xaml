@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MechAp.VehicleRegistration">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!-- Banner -->
+
+            <Frame Style="{StaticResource MainBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="Vehicle Registration"/>
+            </Frame>
+
+            <Entry Style="{StaticResource TopEntry}" 
+                   Placeholder="Vehicle Name"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle Year"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle Make"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle Model"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Vehicle Style"/>
+
+            <Entry Style="{StaticResource BottomEntry}"
+                   Placeholder="Mileage"/>
+
+            <!--Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="MyGaragePgBtn" 
+                    Text="Add to My Garage" 
+                    Clicked="AddGarageBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="BackBtn" 
+                    Text="Back" 
+                    Clicked="BackBtn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
