@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MechAp.MaintenanceInput">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!-- Banner -->
+
+            <Frame Style="{StaticResource SubBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="Maintenance Input"/>
+            </Frame>
+
+            <!-- Maintenance Input Entries -->
+            
+            <Entry Style="{StaticResource TopEntry}"
+                   Placeholder="Vehicle"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Maintenance Item"/>
+
+            <Entry Style="{StaticResource MidEntry}"
+                   Placeholder="Mileage"/>
+
+            <Entry Style="{StaticResource BottomEntry}"
+                   Placeholder="Date"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Text="Set Reminder?"/>
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="10">
+                <RadioButton Style="{StaticResource LeftRadioButton}" IsChecked="True" Content="Yes"/>
+                <RadioButton Style="{StaticResource RightRadioButton}" Grid.Column="1" Content="No"/>
+            </Grid>
+
+            <!--Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="TrackerViewBtn"
+                    Text="Submit"
+                    Clicked="TrackerViewBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}" 
+                    x:Name="MyGarageBtn" 
+                    Text="My Garage" 
+                    Clicked="MyGarageBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="MaintMenuBtn" 
+                    Text="Maintenance Menu" 
+                    Clicked="MaintMenuBtn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

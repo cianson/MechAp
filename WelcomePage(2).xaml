@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!-- Banner -->
+            
+            <Frame Style="{StaticResource MainBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="Welcome to&#xA;MechAp"/>
+            </Frame>
+            
+            <Frame Style="{StaticResource SubBanner}">
+                <Label Style="{StaticResource SubBannerLabel}" Text="Keep Your Car Running"/>
+            </Frame>
+            
+            <!-- Logo -->
+            
+            <Frame BackgroundColor="Black" Margin="10, 30, 10, 10" CornerRadius="30">
+                <Image Source="mechaplogo.png" WidthRequest="500" MinimumWidthRequest="500">
+                </Image>
+            </Frame>
+            
+            <!-- Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                    x:Name="LoginPgBtn" 
+                    Text="Login" 
+                    Clicked="LoginPgBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}" 
+                    x:Name="RegistrationPgBtn" 
+                    Text="New? Register Here" 
+                    Clicked="RegistrationPgBtn_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
