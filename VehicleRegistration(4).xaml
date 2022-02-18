@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.VehicleRegistration"
+             xmlns:local = "clr-namespace:MechAp">
+             
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel/>
+    </ContentPage.BindingContext>
+
+        <StackLayout>
+        <!-- Banner -->
+
+        <Frame Style="{StaticResource MainBanner}">
+            <Label Style="{StaticResource MainBannerLabel}" Text="Vehicle Registration"/>
+        </Frame>
+
+        <Entry Style="{StaticResource TopEntry}" 
+               Placeholder="Vehicle Name"
+               x:Name="VehicleNameEntry"/>
+
+        <Entry Style="{StaticResource MidEntry}"
+               Placeholder="Vehicle Year"
+               x:Name="VehicleYearEntry"
+               Keyboard="Numeric"
+               Margin="30, 0, 30, 0"/>
+
+        <Picker Style="{StaticResource MidEntry}"
+                x:Name="makePickerEntry"
+                Title="Make"
+                SelectedIndexChanged="makePickerEntry_SelectedIndexChanged">
+
+            <Picker.ItemsSource >
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Chevy</x:String>
+                    <x:String>Chrysler</x:String>
+                    <x:String>Dodge</x:String>
+                    <x:String>Ford</x:String>
+                    <x:String>GMC</x:String>
+                    <x:String>Honda</x:String>
+                    <x:String>Mazda</x:String>
+                    <x:String>Subaru</x:String>
+                    <x:String>Toyota</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+            
+        </Picker>
+
+        <Picker Style="{StaticResource MidEntry}"
+                x:Name="modelPickerEntry"
+                Title="Model"
+                SelectedIndexChanged="modelPickerEntry_SelectedIndexChanged">
+
+                <Picker.Items>
+
+                </Picker.Items>
+
+        </Picker>
+
+        <Entry Style="{StaticResource MidEntry}"
+               Placeholder="Style"
+               x:Name="StyleEntry"/>
+
+        <Entry Style="{StaticResource BottomEntry}"
+               Placeholder="Mileage"
+               x:Name="MilageEntry"
+               Keyboard="Numeric"/>
+
+        <!--Navigation Buttons -->
+        <Button Style="{StaticResource Button}" 
+                Text="Add to My Garage" 
+                Clicked="AddGarageBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}"
+                x:Name="BackBtn" 
+                Text="Back" 
+                Clicked="BackBtn_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
