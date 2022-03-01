@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.VehicleProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Vehicle Profile Page!"
+                   FontSize="50"
+                   TextColor="{StaticResource Yellow}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Car Name"
+                   FontSize="40"
+                   TextColor="{StaticResource Red}"/>
+
+            <!-- Navigation Buttons-->
+            
+            <Button Style="{StaticResource Button}" 
+                    x:Name="GarageBtn" 
+                    Text="Back to Garage" 
+                    Clicked="GarageBtn_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
