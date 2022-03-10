@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.MyGarage"
+             xmlns:local = "clr-namespace:MechAp">
+
+    <ContentPage.BindingContext>
+        <local:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <!-- Banner -->
+
+        <Frame Style="{StaticResource MainBanner}">
+            <Label Style="{StaticResource MainBannerLabel}" Text="My Garage"/>
+        </Frame>
+
+        <!-- Logo -->
+
+        <Frame Style="{StaticResource LogoFrame}">
+            <Image Source="mechaplogo.PNG" Style="{StaticResource Logo}">
+            </Image>
+        </Frame>
+
+        <!-- Scroll Through List of Vehicles in Garage -->
+
+        <ScrollView Style="{StaticResource Scroll}">
+            <ListView x:Name="GarageInventoryList"
+                      VerticalScrollBarVisibility="Always"
+                      ItemSelected="GarageInventoryList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding CarName}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <!-- Navigation Buttons-->
+
+        <Button Style="{StaticResource Button}" 
+                    x:Name="VehicleRegBtn" 
+                    Text="Register a Vehicle" 
+                    Clicked="VehicleRegBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}" 
+                    x:Name="ProfileBtn" 
+                    Text="My Profile" 
+                    Clicked="ProfileBtn_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
