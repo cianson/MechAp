@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.TrackerView">
+
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout>
+            
+            <!-- Banner -->
+
+            <Frame Style="{StaticResource MainBanner}">
+                <Label Style="{StaticResource MainBannerLabel}" Text="Maintenance Log"/>
+            </Frame>
+
+            <!-- Body -->
+
+            <Frame Style="{StaticResource SubBanner}">
+                <Label Style="{StaticResource SubBannerLabel}" 
+                           Text="User's Name's vehicle Name here"
+                           x:Name="vehicleTitle"/>
+            </Frame>
+
+            <!-- Scroll Through List of Completed Maintenance Items in the Tracker -->
+
+            <ScrollView Style="{StaticResource Scroll}">
+                <ListView x:Name="MaintenanceLog"
+                              VerticalScrollBarVisibility="Always">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <ListView Margin="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                        Text="Add to Maintenance Log"
+                        Clicked="MaintInputBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                        Text="Maintenance Menu"
+                        Clicked="MaintMenuBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                        Text="Garage"
+                        Clicked="MyGarageBtn_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
