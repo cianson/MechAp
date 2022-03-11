@@ -55,7 +55,8 @@
 
             <Entry Style="{StaticResource BottomEntry}"
                    x:Name="emailPlaceholder"
-                   Placeholder="Email"/>
+                   Placeholder="Email"
+                   Keyboard="Email"/>
 
             <!-- Navigations Buttons -->
 
