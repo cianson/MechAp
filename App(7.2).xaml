@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="Red">DarkRed</Color>
+            <Color x:Key="Blue">DarkBlue</Color>
+            <Color x:Key="Background">#202020</Color>
+            <Color x:Key="Yellow">#F5d11e</Color>
+            <Color x:Key="White">white</Color>
+            <Color x:Key="EntryColor">#f5d11e</Color>
+            <Color x:Key="EntryBackGroundColor">black</Color>
+
+            <!-- Background of entire application-->
+            <Style TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource Background}"/>
+            </Style>
+
+            <!-- Logo -->
+            <Style x:Key="Logo" TargetType="Image">
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="MinimumWidthRequest" Value="200"/>
+            </Style>
+
+            <!-- Logo Frame -->
+            <Style x:Key="LogoFrame" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="Margin" Value="50, 30, 50, 10"/>
+                <Setter Property="CornerRadius" Value="30"/>
+            </Style>
+
+            <!-- Large Label Text -->
+            <Style x:Key="LargeLabelText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!-- Small Label Text -->
+            <Style x:Key="SmallLabelText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+
+            <!-- Main banner of each page -->
+            <Style x:Key="MainBanner" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource Red}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Red}"/>
+                <Setter Property="Padding" Value="36"/>
+                <Setter Property="Margin" Value="-10, 0, -10, 0"/>
+                <Setter Property="CornerRadius" Value="0"/>
+            </Style>
+
+            <!-- Label in main banner -->
+            <Style x:Key="MainBannerLabel" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!-- Second banner underneath main -->
+            <Style x:Key="SubBanner" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource Blue}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Blue}"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="-10"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="BorderColor" Value="{StaticResource White}"/>
+            </Style>
+
+            <!-- Label in second banner -->
+            <Style x:Key="SubBannerLabel" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!-- Navigation buttons -->
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Yellow}"/>
+                <Setter Property="TextColor" Value="{StaticResource Background}"/>
+                <Setter Property="BorderWidth" Value="5"/>
+                <Setter Property="Margin" Value="70, 10, 70, 3"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <!-- Navigation buttons in grid style -->
+            <Style x:Key="GridNavButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Yellow}"/>
+                <Setter Property="TextColor" Value="{StaticResource Background}"/>
+                <Setter Property="BorderWidth" Value="5"/>
+                <Setter Property="Margin" Value="0, 30, 0, 0"/>
+                <Setter Property="WidthRequest" Value="180"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <!-- Radio buttons -->
+            <Style x:Key="LeftRadioButton" TargetType="RadioButton">
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+
+            <Style x:Key="RightRadioButton" TargetType="RadioButton">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0, 0, 0, 10"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+
+            <!-- Grid buttons -->
+            <Style x:Key="GridButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource EntryBackGroundColor}"/>
+                <Setter Property="BorderColor" Value="{StaticResource Yellow}"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="3, 2, 3, 2"/>
+            </Style>
+
+            <!-- Header Grid -->
+            <Style x:Key="HeaderGrid" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="0, 30, 0, 30"/>
+            </Style>
+
+            <!-- Scroll View -->
+            <Style x:Key="Scroll" TargetType="ScrollView">
+                <Setter Property="VerticalScrollBarVisibility" Value="Always"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="MinimumWidthRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="210"/>
+                <Setter Property="MinimumHeightRequest" Value="210"/>
+                <Setter Property="Margin" Value="20"/>
+            </Style>
+
+            <!-- Top, middle, and bottom entries -->
+            <Style x:Key="TopEntry" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource EntryBackGroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="Margin" Value="30, 20, 30, 10"/>
+            </Style>
+
+            <Style x:Key="MidEntry" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource EntryBackGroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="Margin" Value="30, 0, 30, 10"/>
+            </Style>
+
+            <Style x:Key="BottomEntry" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource EntryBackGroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource EntryColor}"/>
+                <Setter Property="Margin" Value="30, 0, 30, 20"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
