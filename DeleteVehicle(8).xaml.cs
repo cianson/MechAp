@@ -21,6 +21,8 @@ namespace MechAp
 
             this.selectedCar = selectedCar;
             this.loggedIn = loggedIn;
+            
+            VehicleName.Text = selectedCar.CarName;
         }
 
         void DeleteBtn_Clicked(System.Object sender, System.EventArgs e)
