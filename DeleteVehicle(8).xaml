@@ -26,6 +26,12 @@
                        Grid.Column="0"/>
 
                 <Label Style="{StaticResource HeaderGrid}"
+                       BackgroundColor="{StaticResource Red}"
+                       VerticalOptions="Center"
+                       Margin="0"
+                       FontSize="Header"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
                        x:Name="VehicleName"
                        Text="VehicleName"
                        Grid.Row="0"
