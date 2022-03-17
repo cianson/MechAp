@@ -43,7 +43,8 @@
                    Text="Delete This Vehicle"/>
 
             <Entry Style="{StaticResource TopEntry}" 
-                   Placeholder="Enter Your Password"/>
+                   Placeholder="Enter Your Password"
+                   IsPassword = "True"/>
 
             <Label Style="{StaticResource LargeLabelText}" Margin="20, 20, 20, 40"
                    Text="Warning: Upon deletion of this vehicle, you will no longer be able to access the associated vehicle content and not previously downloaded maintenance log content."/>
