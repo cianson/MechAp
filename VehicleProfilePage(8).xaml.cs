@@ -41,7 +41,7 @@ namespace MechAp
         //Navigation buttons
         private void VehicleInfoUpdateBtn_Clicked(object sender, EventArgs e)
         {
-
+            App.Current.MainPage = new VehicleInfo(selectedCar, loggedIn);
         }
         private void DeleteVehicleBtn_Clicked(object sender, EventArgs e)
         {
