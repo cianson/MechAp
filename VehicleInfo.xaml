@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.VehicleProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Banner -->
+
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       Text="Car Photo"
+                       FontSize="Header"
+                       BackgroundColor="Black"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       BackgroundColor="{StaticResource Red}"
+                       VerticalOptions="Center"
+                       Margin="0"
+                       FontSize="Header"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
+                       x:Name="ProfileTitle"
+                       Text="Car Name"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Image Source="mechaplogo.png" 
+                       Style="{StaticResource Logo}"
+                       Margin="0"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Frame Style="{StaticResource SubBanner}"
+                   Margin="-10, -10, -10, 0">
+                <Label Style="{StaticResource SubBannerLabel}"
+                       Text="Profile Page"/>
+            </Frame>
+
+            <!-- Profile Information -->
+
+            <Entry Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="yearDisplay"
+                   Placeholder="Year"/>
+
+            <Entry Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="makeDisplay"
+                   Placeholder="Make"/>
+
+            <Entry Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="modelDisplay"
+                   Placeholder="Model"/>
+
+            <Entry Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 20"
+                   x:Name="styleDisplay"
+                   Placeholder="Style"/>
+            <Entry Style="{StaticResource SmallLabelText}" Margin="0, 10,0,20"
+                   x:Name="PasswordEntry"
+                   Placeholder="Current Password"
+                   IsPassword = "True"/>
+
+            <!-- Navigation Buttons -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Update"
+                        Margin="0,5,0,5"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Clicked="UpdateBtn_Clicked"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="GarageBtn"
+                        Text="Cancel"
+                        Margin="0,5,0,5"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Clicked="CancelBtn_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
