@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.LogItem">
+    <StackLayout>
+
+        <!-- Banner -->
+        <Frame Style="{StaticResource SubBanner}">
+            <Label Style="{StaticResource SubBannerLabel}" 
+                           Text="User's Name's vehicle Name here"
+                           x:Name="vehicleTitle"/>
+        </Frame>
+
+        <!-- Body -->
+            <Label Style="{StaticResource SmallLabelText}"
+                   FontSize="Body"
+                   x:Name="DateCompletedDisplay"
+                   Margin="5, 30, 5, 0"/>
+            <Label Style="{StaticResource SmallLabelText}"
+                   Text="Milage when Completed:"
+                   FontSize="Body"
+                   Margin="0"/>
+            <Entry Style="{StaticResource MidEntry}"
+                   x:Name="MilageCompletedDisplay"
+                   FontSize="Body"
+                   Margin="30,0,30,0"
+                   Keyboard="Numeric"/>
+            <Label Style="{StaticResource SmallLabelText}"
+                   Text="Title of Maintenance Completed:"
+                   Margin="0"
+                   FontSize="Body"/>
+            <Entry Style="{StaticResource TopEntry}"
+                   x:Name="MtnTitleDisplay"
+                   FontSize="Body"
+                   Margin="30,0,30,0"/>
+            <Label Style="{StaticResource SmallLabelText}"
+                   x:Name="DueDateDisplay"
+                   FontSize="Body"/>
+        <Label Style="{StaticResource SmallLabelText}"
+                   x:Name="DueMilageDisplay"
+                   FontSize="Body"
+                   Margin="0"/>
+        <Grid ColumnDefinitions="3*,1*,3*"
+                          RowDefinitions="*,*">
+                <Label Text="Set a Reminder?"
+                               Style="{StaticResource SmallLabelText}"
+                               TextColor="{StaticResource EntryColor}"
+                               Grid.Row="0"
+                               Grid.ColumnSpan="3"/>
+                <Label Text="No"
+                               HorizontalOptions="End"
+                               Style="{StaticResource SmallLabelText}"
+                               TextColor="{StaticResource EntryColor}"
+                               Grid.Row="1"
+                               Grid.Column="0"/>
+                <Switch x:Name="reminderSetting"
+                                HorizontalOptions="Center"
+                                ThumbColor="{StaticResource EntryColor}"
+                                Grid.Row="1"
+                                Grid.Column="1"/>
+                <Label Text="Yes"
+                               Style="{StaticResource SmallLabelText}"
+                               TextColor="{StaticResource EntryColor}"
+                               HorizontalOptions="Start"
+                               Grid.Row="1"
+                               Grid.Column="2"/>
+
+            </Grid>
+        <Frame HeightRequest="-35" BackgroundColor="Black"></Frame>
+            <Label Style="{StaticResource SmallLabelText}"
+                   Text="In order to update or Delete this information please enter your password below."
+                   FontSize="Body"/>
+            <Entry Style="{StaticResource BottomEntry}"
+                   x:Name="passwordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   FontSize="Body"
+                   Margin="30,0,30,0"/>
+        
+        <!-- Navigation Buttons -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Update Log"
+                    Clicked="UpdateBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Delete Log Item"
+                    Clicked="DeleteBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Back to Log"
+                    Clicked="BackToLogBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

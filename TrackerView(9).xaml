@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.TrackerView">
+
+
+    <StackLayout>
+
+        <!-- Banner -->
+
+        <Frame Style="{StaticResource MainBanner}">
+            <Label Style="{StaticResource MainBannerLabel}" Text="Maintenance Log" FontSize="Title"/>
+        </Frame>
+
+        <!-- Body -->
+
+        <Frame Style="{StaticResource SubBanner}">
+            <Label Style="{StaticResource SubBannerLabel}" 
+                           Text="User's Name's vehicle Name here"
+                           x:Name="vehicleTitle"/>
+        </Frame>
+
+        <!-- Scroll Through List of Log Items in Tracker -->
+
+        <Grid Margin="0, 25, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="2.4*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Date Completed"
+                   Style="{StaticResource LogColumnTitle}"
+                   Grid.Column="0"/>
+            <Label Text="Maintenanace Title"
+                   Style="{StaticResource LogColumnTitle}"
+                   Grid.Column="1"/>
+            <Label Text="Reminder Set?"
+                   Style="{StaticResource LogColumnTitle}"
+                   Grid.Column="2"/>
+        </Grid>
+        
+        <ScrollView Style="{StaticResource Scroll}" Margin="0, 5, 0, 0" MinimumWidthRequest="350" WidthRequest="340" >
+            <ListView x:Name="MaintenanceLog"
+                      VerticalScrollBarVisibility="Always"
+                      BackgroundColor="{StaticResource White}"
+                      ItemSelected="MaintenanceLog_ItemSelected"
+                      Margin="0, 5, 0, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding DateCompleted}"
+                                       Style="{StaticResource LogLabel}"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding MaintenanceTitle}"
+                                       Style="{StaticResource LogLabel}"
+                                       Grid.Column="1"/>
+                                <Label Text="{Binding ReminderSet}"
+                                       Style="{StaticResource LogLabel}"
+                                       Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <!-- Navigation Buttons -->
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Add to Maintenance Log"
+                    Clicked="MaintInputBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Maintenance Menu"
+                    Clicked="MaintMenuBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Garage"
+                    Clicked="MyGarageBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+
+            <Button Style="{StaticResource GridNavButton}"
+                    Text="Share/Print"
+                    Clicked="ShareBtn_Clicked"
+                    Margin="0, 20, 0, 5"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
