@@ -47,7 +47,8 @@
 
             <Entry Style="{StaticResource TopEntry}"
                    x:Name="passwordEntry"
-                   Placeholder="Enter Your Password"/>
+                   Placeholder="Enter Your Password"
+                   IsPassword="True"/>
 
             <Label Style="{StaticResource LargeLabelText}" Margin="20, 20, 20, 40"
                    Text="Warning: Upon deletion of this profile, user will no longer be able to access the associated garage content and not previously downloaded maintenance log content."/>
