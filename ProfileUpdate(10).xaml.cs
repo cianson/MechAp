@@ -101,7 +101,7 @@ namespace MechAp
 
         private void ChangePasswordBtn_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new ChangePassword(loggedIn);
+            App.Current.MainPage = new ChangePassword(loggedIn, userLoggedIn);
         }
     }
 }
