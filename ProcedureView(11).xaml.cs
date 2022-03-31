@@ -30,7 +30,7 @@ namespace MechAp
             this.loggedIn = loggedIn;
             this.procedureSelected = procedureSelected;
 
-            TitleDisplay.Text = procedureSelected.ProcedureTitle;
+            TitleDisplay.Text = procedureSelected.ProcedureTitle + " on " + selectedCar.CarName;
             procedureDisplay.Text = procedureSelected.FileName;
 
         }
