@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.VehicleProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Banner -->
+
+            <Grid Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       Text="Car Photo"
+                       FontSize="Header"
+                       BackgroundColor="Black"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       BackgroundColor="{StaticResource Red}"
+                       VerticalOptions="Center"
+                       Margin="0"
+                       FontSize="Header"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
+                       x:Name="ProfileTitle"
+                       Text="Car Name"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Image Source="mechaplogo.png" 
+                       Style="{StaticResource Logo}"
+                       Margin="0"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+            </Grid>
+
+            <Frame Style="{StaticResource SubBanner}"
+                   Margin="-10, -10, -10, 0">
+                <Label Style="{StaticResource SubBannerLabel}"
+                       Text="Profile Page"/>
+            </Frame>
+
+            <!-- Profile Information -->
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 20, 0, 0"
+                   x:Name="yearDisplay"
+                   Text="Year"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="makeDisplay"
+                   Text="Make"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="modelDisplay"
+                   Text="Model"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="styleDisplay"
+                   Text=""/>
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 0"
+                   x:Name="milageDisplay"
+                   Text=""/>
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 10, 0, 20"
+                   x:Name="vehicleCode"
+                   Text="vehicle code"/>
+
+            <!-- Navigation Buttons -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Update Vehicle Info"
+                        Margin="0,5,0,5"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Clicked="VehicleInfoUpdateBtn_Clicked"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Delete Vehicle"
+                        Margin="0,5,0,5"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Clicked="DeleteVehicleBtn_Clicked"/>
+                
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="TrackerBtn"
+                        Text="Maintenance Log"
+                        Clicked="TrackerBtn_Clicked"
+                         Margin="0,5,0,5"
+                        Grid.Row="1"
+                        Grid.Column="0"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="InputMtnBtn"
+                        Text="Log Maintenance"
+                        Clicked="MaintInputBtn_Clicked"
+                        Margin="0,5,0,5"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Maintenance Menu"
+                        Clicked="MaintMenuBtn_Clicked"
+                        Margin="0,5,0,5"
+                        Grid.Row="2"
+                        Grid.Column="0"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="GarageBtn"
+                        Text="Back to Garage"
+                        Clicked="GarageBtn_Clicked"
+                        Margin="0,5,0,5"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
