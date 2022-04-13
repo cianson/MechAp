@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.DeleteVehicle">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Banner -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       Text="Photo"
+                       BackgroundColor="Black"
+                       HeightRequest="90"
+                       MinimumHeightRequest="90"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       BackgroundColor="{StaticResource Red}"
+                       VerticalOptions="Center"
+                       Margin="0"
+                       FontSize="Header"
+                       HeightRequest="80"
+                       MinimumHeightRequest="80"
+                       x:Name="VehicleName"
+                       Text="VehicleName"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Image Source="mechaplogo.PNG" 
+                       Style="{StaticResource Logo}"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+            </Grid>
+
+            <!-- Body -->
+
+            <Label Style="{StaticResource MainBannerLabel}"
+                   Text="Delete This Vehicle"/>
+
+            <Entry Style="{StaticResource TopEntry}" 
+                   Placeholder="Enter Your Password"
+                   x:Name="passwordEntry"
+                   IsPassword="True"/>
+
+            <Label Style="{StaticResource LargeLabelText}" Margin="20, 20, 20, 40"
+                   Text="Warning: Upon deletion of this vehicle, you will no longer be able to access the associated vehicle content and not previously downloaded maintenance log content."/>
+
+            <!-- Navigation Buttons -->
+
+            <Button Style="{StaticResource Button}"
+                        x:Name="DeleteBtn"
+                        Text="Delete Vehicle"
+                        Clicked="DeleteBtn_Clicked"/>
+
+            <Button Style="{StaticResource Button}"
+                        x:Name="CancelBtn"
+                        Text="Cancel"
+                        Clicked="CancelBtn_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
