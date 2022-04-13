@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Banner -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       Text="Photo"
+                       BackgroundColor="Black"
+                       HeightRequest="90"
+                       MinimumHeightRequest="90"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                <Label Style="{StaticResource HeaderGrid}"
+                       x:Name="ProfileTitle"
+                       Text="Username"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Image Source="mechaplogo.png" 
+                       Style="{StaticResource Logo}"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+            </Grid>
+
+            <!-- Profile Information -->
+
+            <Label Style="{StaticResource MainBannerLabel}"
+                   Text="Profile Page"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 20, 0, 0"
+                   x:Name="usernameDisplay"
+                   Text="Username"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 20, 0, 0"
+                   x:Name="firstNameDisplay"
+                   Text="First Name"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 20, 0, 0"
+                   x:Name="lastNameDisplay"
+                   Text="Last Name"/>
+
+            <Label Style="{StaticResource SmallLabelText}" Margin="0, 20, 0, 20"
+                   x:Name="emailDisplay"
+                   Text="Email"/>
+
+            <!-- Navigation Buttons -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="GarageBtn"
+                        Text="My Garage"
+                        Clicked="GarageBtn_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        x:Name="LogOutBtn"
+                        Text="Log Out"
+                        Clicked="LogOutBtn_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Update Profile"
+                        Clicked="UpdateProfileBtn_Clicked"
+                        Grid.Row="1"
+                        Grid.Column="0"/>
+
+                <Button Style="{StaticResource GridNavButton}"
+                        Text="Delete Profile"
+                        Clicked="DeleteProfileBtn_Clicked"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+
+            </Grid>
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Style="{StaticResource SmallLabelText}"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0, 50, 0, 0"
+                       Text="Privacy Policy">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="XamarinLink" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Style="{StaticResource SmallLabelText}"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Margin="0, 50, 0, 0"
+                       Text="User Agreement">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="XamarinLink" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
