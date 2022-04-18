@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.MaintenanceMenu">
+
+    <StackLayout>
+
+        <!-- Banner -->
+
+        <Frame Style="{StaticResource MainBanner}">
+            <Label Style="{StaticResource MainBannerLabel}" Text="Maintenance Menu"/>
+        </Frame>
+
+        <!-- Grid of Menu Choices -->
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Style="{StaticResource GridButton}"
+                    Text="Tire Pressure"
+                    Clicked="TirePressure_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Tire Change"
+                    Clicked="TireChange_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Wiper Blade"
+                    Clicked="WiperBlades_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="2"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Headlight Bulb"
+                    Clicked="HeadlightBulb_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Taillight Bulb"
+                    Clicked="TaillightBulb_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Cabin Air Filter"
+                    Clicked="CabinAirFilter_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="2"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Intake Air Filter"
+                    Clicked="IntakeAirFilter_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Front Brake Pads"
+                    Clicked="FrontBrakePads_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Rear Brake Pads"
+                    Clicked="RearBrakePads_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="2"/>
+            <Button Style="{StaticResource GridButton}"
+                    Text="Oil Change"
+                    Clicked="OilChange_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+        </Grid>
+
+        <!-- Navigation Buttons -->
+
+        <Button Style="{StaticResource Button}"
+                Text="Profile"
+                Clicked="GarageBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}"
+                Text="Maintenance Log"
+                Clicked="MaintenanceLogBtn_Clicked"/>
+
+        <Button Style="{StaticResource Button}"
+                Text="More Maintenance"
+                Clicked="MoreMaintenanceBtn_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
